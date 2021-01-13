@@ -6,13 +6,15 @@ public class Factory : MonoBehaviour
 {
     [SerializeField] GameObject prefab;
 
+    public float despawn = 2;
+
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
             GameObject go = Instantiate(prefab, transform);
-            Destroy(go, 1);
+            Destroy(go, despawn);
         }
     }
 }

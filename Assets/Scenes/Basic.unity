@@ -1110,6 +1110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 6925845238692181464, guid: e267619f36475ec4d92f870d9975c632, type: 3}
+  despawn: 4
 --- !u!4 &1854062891
 Transform:
   m_ObjectHideFlags: 0
