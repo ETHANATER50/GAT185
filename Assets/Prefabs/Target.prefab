@@ -111,3 +111,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 100
   material: {fileID: 2100000, guid: 13171744e65d83b41ab3e6d603968721, type: 2}
+  destroyGameObject: {fileID: 1102583494738459979}

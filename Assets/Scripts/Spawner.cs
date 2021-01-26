@@ -20,7 +20,7 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.childCount == 0)
+        if(transform.childCount == 0 && Game.Instance.state == Game.State.Game)
         {
             spawnTimer -= Time.deltaTime;
         }

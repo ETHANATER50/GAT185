@@ -20,7 +20,6 @@ public class Weapon : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            fireTimer += Time.deltaTime;
 
             //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             //Vector3 direction = (point - transform.position).normalized;
@@ -28,6 +27,7 @@ public class Weapon : MonoBehaviour
 
 
         }
+            fireTimer += Time.deltaTime;
     }
 
     public bool Fire(Vector3 position, Vector3 direction)
