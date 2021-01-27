@@ -6,9 +6,12 @@ using TMPro;
 public class Game : MonoBehaviour
 {
     public int score { get; set; } = 0;
+    public int highScore { get; set; } = 9300;
     public TextMeshProUGUI scoreUI;
     public TextMeshProUGUI timerUI;
+    public TextMeshProUGUI highScoreUI;
     public GameObject startScreen;
+    public GameObject endScreen;
     public AudioSource music;
 
     static Game instance = null;
@@ -38,9 +41,10 @@ public class Game : MonoBehaviour
                 startScreen.SetActive(true);
                 break;
             case State.StartGame:
-                timer = 90;
+                timer = 30;
                 score = 0;
                 startScreen.SetActive(false);
+                endScreen.SetActive(false);
                 music.Play();
                 state = State.Game;
                 break;
@@ -54,6 +58,9 @@ public class Game : MonoBehaviour
                 }
                 break;
             case State.GameOver:
+                if (score > highScore) highScore = score;
+                highScoreUI.text = string.Format("{0:D4}", highScore);
+                endScreen.SetActive(true);
                 break;
             default:
                 break;

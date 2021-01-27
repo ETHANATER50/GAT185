@@ -21,7 +21,8 @@ public class Target : MonoBehaviour
         if (collision.gameObject.CompareTag("Projectile"))
         {
             Game.Instance.addPoints(points);
-            if(destroyGameObject != null)
+            GetComponent<AudioSource>()?.Play();
+            if (destroyGameObject != null)
             {
                 Destroy(destroyGameObject);
             }
